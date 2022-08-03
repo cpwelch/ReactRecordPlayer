@@ -1,0 +1,61 @@
+.album {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  background-position: center;
+  background-size: cover;
+  box-shadow: -2px 0px 10px 0px rgba(0, 0, 0, 0.394);
+}
+
+.albumSelected {
+  top: 22.5% !important;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 0px 10px 0px rgba(0, 0, 0, 0.394);
+}
+
+.slide {
+  animation: slide 0.75s linear 0s 1 normal forwards;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX();
+  }
+
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
+.play-button {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-left: 3rem solid white;
+  transition: all 200ms ease-out;
+  transition-delay: 100ms;
+}
+
+.play-button:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.pause-button {
+  width: 1rem;
+  height: 3.25rem;
+  border-left: 1rem solid white;
+  border-right: 1rem solid white;
+  transition: all 200ms ease-out;
+  transition-delay: 100ms;
+}
+
+.pause-button:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+}

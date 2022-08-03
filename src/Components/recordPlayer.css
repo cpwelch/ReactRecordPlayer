@@ -1,0 +1,237 @@
+.recordDeck {
+  position: relative;
+  width: 45rem;
+  height: 30rem;
+  margin: 15vh auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: none;
+  border: 0.1rem solid rgb(53, 53, 53);
+  outline: 1rem solid #30aaa7;
+  border-radius: 1.5rem;
+  background: linear-gradient(46deg, #141414 0%, #353535 100%);
+  box-shadow: 0px 0px 15px 20px rgba(45, 45, 45, 0.7);
+}
+
+.record {
+  width: 15rem;
+  height: 15rem;
+  background-image: url(../../public/albumcov.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50rem;
+  box-shadow: 0rem 0rem 0rem 1rem rgb(18, 18, 18),
+    0rem 0rem 0rem 1.05rem rgb(10, 10, 10),
+    0rem 0rem 0rem 1.95rem rgb(18, 18, 18), 0rem 0rem 0rem 2rem rgb(10, 10, 10),
+    0rem 0rem 0rem 2.8rem rgb(18, 18, 18),
+    0rem 0rem 0rem 2.85rem rgb(10, 10, 10),
+    0rem 0rem 0rem 3.7rem rgb(18, 18, 18),
+    0rem 0rem 0rem 2.85rem rgb(10, 10, 10),
+    0rem 0rem 0rem 3.7rem rgb(18, 18, 18),
+    0rem 0rem 0rem 3.75rem rgb(10, 10, 10),
+    0rem 0rem 0rem 4.6rem rgb(18, 18, 18),
+    0rem 0rem 0rem 4.65rem rgb(10, 10, 10),
+    0rem 0rem 0rem 5.5rem rgb(18, 18, 18),
+    0rem 0rem 0rem 5.55rem rgb(10, 10, 10),
+    0rem 0rem 0rem 6.4rem rgb(18, 18, 18),
+    0rem 0rem 0rem 6.45rem rgb(10, 10, 10),
+    0rem 0rem 0rem 7.3rem rgb(18, 18, 18),
+    0rem 0rem 0rem 7.35rem rgb(10, 10, 10),
+    0rem 0rem 0rem 8.2rem rgb(18, 18, 18),
+    0rem 0rem 0rem 8.25rem rgb(10, 10, 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid rgb(234, 234, 234);
+  z-index: 2;
+}
+
+.playing {
+  animation: playing 5s linear 1.5s infinite normal forwards;
+}
+
+@keyframes playing {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.recordCenter {
+  width: 2rem;
+  height: 2rem;
+  background: radial-gradient(#dad9d9 19%, #7d7c7c 33%, #fff 42%);
+  border-radius: 50%;
+}
+
+.recordControls {
+  padding-left: 5rem;
+  width: 10rem;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.armBase {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  background: rgb(163, 160, 149);
+  background: radial-gradient(#fff 6%, #504e4e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0px 0px 8px 3.5px rgb(43, 43, 43);
+  cursor: pointer;
+}
+
+.arm {
+  border-radius: 2rem;
+  margin-top: 3.5rem;
+  width: 0.5rem;
+  height: 20rem;
+  background: rgb(163, 160, 149);
+  background: linear-gradient(
+    90deg,
+    rgba(163, 160, 149, 1) 0%,
+    rgba(255, 255, 255, 1) 68%,
+    rgba(168, 180, 158, 1) 100%,
+    rgba(48, 48, 24, 1) 255%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 3;
+}
+.play {
+  animation: play 1s ease-out 0s 1 normal forwards;
+}
+
+@keyframes play {
+  0% {
+    transform: rotate(0);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: rotate(32deg);
+    transform-origin: top;
+  }
+}
+
+.needleHead {
+  width: 1rem;
+  height: 3rem;
+  background: rgb(163, 160, 149);
+  background: linear-gradient(
+    90deg,
+    rgba(163, 160, 149, 1) 0%,
+    rgba(255, 255, 255, 1) 68%,
+    rgba(168, 180, 158, 1) 100%,
+    rgba(48, 48, 24, 1) 255%
+  );
+}
+
+.sliders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+#Controller,
+#volumeController {
+  transform: rotate(-90deg);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #246170;
+  cursor: pointer;
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 10rem;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ebeaea;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.greenLight {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: radial-gradient(#fffa00 0%, #66f126 100%);
+  box-shadow: 0px 0px 28px 10px #66f126;
+}
+
+.redLight {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: radial-gradient(#ff9d00 0%, #ef3b04 100%);
+  box-shadow: 0px 0px 28px 10px #ef3b04;
+}
+
+.notPlayingLight {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: radial-gradient(#e7e7e7 0%, #a5a5a5 100%);
+}
+
+.playingLight {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: radial-gradient(#e7e7e7 0%, #a5a5a5 100%);
+}
+
+.signature {
+  position: absolute;
+  top: 0rem;
+  right: 1.2rem;
+  font-family: "Dancing Script", cursive;
+  color: rgb(217, 188, 114);
+  font-size: larger;
+}

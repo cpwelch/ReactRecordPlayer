@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  /* background: #ea8888; */
+  background: #eacb88;
+}
